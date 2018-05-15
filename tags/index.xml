@@ -2,112 +2,112 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Application Security Blog</title>
-    <link>blog.jamesotten.com/tags/</link>
+    <link>https://blog.jamesotten.com/tags/</link>
     <description>Recent content in Tags on Application Security Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
     <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="blog.jamesotten.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.jamesotten.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Authorization</title>
-      <link>blog.jamesotten.com/tags/authorization/</link>
+      <link>https://blog.jamesotten.com/tags/authorization/</link>
       <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/authorization/</guid>
+      <guid>https://blog.jamesotten.com/tags/authorization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Buildmaster</title>
-      <link>blog.jamesotten.com/tags/buildmaster/</link>
+      <link>https://blog.jamesotten.com/tags/buildmaster/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/buildmaster/</guid>
+      <guid>https://blog.jamesotten.com/tags/buildmaster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Csrf</title>
-      <link>blog.jamesotten.com/tags/csrf/</link>
+      <link>https://blog.jamesotten.com/tags/csrf/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/csrf/</guid>
+      <guid>https://blog.jamesotten.com/tags/csrf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cve</title>
-      <link>blog.jamesotten.com/tags/cve/</link>
+      <link>https://blog.jamesotten.com/tags/cve/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/cve/</guid>
+      <guid>https://blog.jamesotten.com/tags/cve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Directory Traversal</title>
-      <link>blog.jamesotten.com/tags/directory-traversal/</link>
+      <link>https://blog.jamesotten.com/tags/directory-traversal/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/directory-traversal/</guid>
+      <guid>https://blog.jamesotten.com/tags/directory-traversal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nuget</title>
-      <link>blog.jamesotten.com/tags/nuget/</link>
+      <link>https://blog.jamesotten.com/tags/nuget/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/nuget/</guid>
+      <guid>https://blog.jamesotten.com/tags/nuget/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Octopus Deploy</title>
-      <link>blog.jamesotten.com/tags/octopus-deploy/</link>
+      <link>https://blog.jamesotten.com/tags/octopus-deploy/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/octopus-deploy/</guid>
+      <guid>https://blog.jamesotten.com/tags/octopus-deploy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personal</title>
-      <link>blog.jamesotten.com/tags/personal/</link>
+      <link>https://blog.jamesotten.com/tags/personal/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/personal/</guid>
+      <guid>https://blog.jamesotten.com/tags/personal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proget</title>
-      <link>blog.jamesotten.com/tags/proget/</link>
+      <link>https://blog.jamesotten.com/tags/proget/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/proget/</guid>
+      <guid>https://blog.jamesotten.com/tags/proget/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rce</title>
-      <link>blog.jamesotten.com/tags/rce/</link>
+      <link>https://blog.jamesotten.com/tags/rce/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/rce/</guid>
+      <guid>https://blog.jamesotten.com/tags/rce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Xslt</title>
-      <link>blog.jamesotten.com/tags/xslt/</link>
+      <link>https://blog.jamesotten.com/tags/xslt/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>blog.jamesotten.com/tags/xslt/</guid>
+      <guid>https://blog.jamesotten.com/tags/xslt/</guid>
       <description></description>
     </item>
     

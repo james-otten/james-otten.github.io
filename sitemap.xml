@@ -3,115 +3,115 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>blog.jamesotten.com/about/</loc>
+    <loc>https://blog.jamesotten.com/about/</loc>
     <lastmod>2018-05-13T22:00:49-05:00</lastmod>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/post/buildmaster-xslt-rce/</loc>
+    <loc>https://blog.jamesotten.com/post/buildmaster-xslt-rce/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/post/buildmaster-event-listener-rce/</loc>
+    <loc>https://blog.jamesotten.com/post/buildmaster-event-listener-rce/</loc>
     <lastmod>2018-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/post/package-name-directory-traversals/</loc>
+    <loc>https://blog.jamesotten.com/post/package-name-directory-traversals/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/post/hello-world/</loc>
+    <loc>https://blog.jamesotten.com/post/hello-world/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/</loc>
+    <loc>https://blog.jamesotten.com/</loc>
     <lastmod>2018-05-13T22:00:49-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/authorization/</loc>
+    <loc>https://blog.jamesotten.com/tags/authorization/</loc>
     <lastmod>2018-05-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/buildmaster/</loc>
+    <loc>https://blog.jamesotten.com/tags/buildmaster/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/csrf/</loc>
+    <loc>https://blog.jamesotten.com/tags/csrf/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/cve/</loc>
+    <loc>https://blog.jamesotten.com/tags/cve/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/directory-traversal/</loc>
+    <loc>https://blog.jamesotten.com/tags/directory-traversal/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/nuget/</loc>
+    <loc>https://blog.jamesotten.com/tags/nuget/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/octopus-deploy/</loc>
+    <loc>https://blog.jamesotten.com/tags/octopus-deploy/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/personal/</loc>
+    <loc>https://blog.jamesotten.com/tags/personal/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/post/</loc>
+    <loc>https://blog.jamesotten.com/post/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/proget/</loc>
+    <loc>https://blog.jamesotten.com/tags/proget/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/rce/</loc>
+    <loc>https://blog.jamesotten.com/tags/rce/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/</loc>
+    <loc>https://blog.jamesotten.com/tags/</loc>
     <lastmod>2018-05-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/topics/</loc>
+    <loc>https://blog.jamesotten.com/topics/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>blog.jamesotten.com/tags/xslt/</loc>
+    <loc>https://blog.jamesotten.com/tags/xslt/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
