@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Application Security Blog</title>
-    <link>/post/</link>
+    <link>blog.jamesotten.com/post/</link>
     <description>Recent content in Posts on Application Security Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
     <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="blog.jamesotten.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>BuildMaster Configuration File Template XSLT RCE</title>
-      <link>/post/buildmaster-xslt-rce/</link>
+      <link>blog.jamesotten.com/post/buildmaster-xslt-rce/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/buildmaster-xslt-rce/</guid>
+      <guid>blog.jamesotten.com/post/buildmaster-xslt-rce/</guid>
       <description>&lt;p&gt;In October of 2017 I discovered a vulnerability in &lt;a href=&#34;https://inedo.com/buildmaster&#34;&gt;Inedo BuildMaster&lt;/a&gt; 5.8.1 related to the use of &lt;a href=&#34;https://inedo.com/support/documentation/buildmaster/modeling-applications/configuration-files&#34;&gt;configuration file templates&lt;/a&gt; which allowed for RCE. This vulnerability could be exploited by an authenticated user directly, or by exploiting multiple CSRF vulnerabilities without the user&amp;rsquo;s knowledge in some cases.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>BuildMaster Event Listener RCE</title>
-      <link>/post/buildmaster-event-listener-rce/</link>
+      <link>blog.jamesotten.com/post/buildmaster-event-listener-rce/</link>
       <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/buildmaster-event-listener-rce/</guid>
+      <guid>blog.jamesotten.com/post/buildmaster-event-listener-rce/</guid>
       <description>&lt;p&gt;In my initial look at &lt;a href=&#34;https://inedo.com/buildmaster&#34;&gt;Inedo BuildMaster&lt;/a&gt;, one of the more interesting capabilities I came across was event listeners. &lt;a href=&#34;https://inedo.com/support/documentation/buildmaster/global-components/event-listeners&#34;&gt;Event listeners&lt;/a&gt; allow users to have the BuildMaster server perform certain tasks when certain types of events occur within BuildMaster. It looks like this feature could be very useful to server administrators looking to integrate BuildMaster with external tools, but that&amp;rsquo;s not why it caught my eye. One of the types of event listeners available is &amp;ldquo;Execute Command Line&amp;rdquo;, which allows users to execute system commands on the BuildMaster server. The prevalence of this type of functionality in various CI/CD tools is a topic for another post, but in short, seeing this type of functionality worries me because it guarantees that there is a path to RCE either through application vulnerabilities or gaining access to a privileged user account.&lt;/p&gt;
 
 &lt;p&gt;Given how sensitive command line event listeners are, I decided to do some authorization testing. When testing this functionality with multiple users, I noticed that the option to create command line event listeners was unavailable in the UI for low privileged users, but it was available for privileged users. My testing of BuildMaster 5.8.1 indicated that the limitations enforced through the UI could be bypassed by low privileged users by directly navigating to certain URLs.
@@ -36,10 +36,10 @@
     
     <item>
       <title>Package Name Directory Traversals</title>
-      <link>/post/package-name-directory-traversals/</link>
+      <link>blog.jamesotten.com/post/package-name-directory-traversals/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/package-name-directory-traversals/</guid>
+      <guid>blog.jamesotten.com/post/package-name-directory-traversals/</guid>
       <description>&lt;p&gt;Last year I discovered two very similar directory traversal vulnerabilities in &lt;a href=&#34;https://octopus.com&#34;&gt;Octopus Deploy&lt;/a&gt; and &lt;a href=&#34;https://inedo.com/proget&#34;&gt;Inedo ProGet&lt;/a&gt;. Octopus Deploy&amp;rsquo;s built in NuGet feed and several feed types in ProGet were vulnerable to directory traversal attacks on the package name fields inside packages uploaded to the respective system. While the same type of vulnerability was found for several feed types in ProGet (including npm, Maven, VSIX, Ruby Gems&amp;hellip;), this post will focus on NuGet as it is representative of the other issues.&lt;/p&gt;
 
 &lt;p&gt;These vulnerabilities enabled an attacker to both overwrite arbitrary packages within the respective system and to write packages to arbitrary locations on the server&amp;rsquo;s file system. After a package was overwritten by one of these vulnerabilities, the attacker&amp;rsquo;s package would be returned instead of the original package. This could be used by an attacker spread a backdoor to several systems within a network.
@@ -48,10 +48,10 @@
     
     <item>
       <title>Hello World</title>
-      <link>/post/hello-world/</link>
+      <link>blog.jamesotten.com/post/hello-world/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>blog.jamesotten.com/post/hello-world/</guid>
       <description>Hello World!</description>
     </item>
     
