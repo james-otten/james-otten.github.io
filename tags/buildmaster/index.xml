@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Buildmaster on Application Security Blog</title>
+    <link>/tags/buildmaster/</link>
+    <description>Recent content in Buildmaster on Application Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/buildmaster/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BuildMaster Configuration File Template XSLT RCE</title>
+      <link>/post/buildmaster-xslt-rce/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/buildmaster-xslt-rce/</guid>
+      <description>&lt;p&gt;In October of 2017 I discovered a vulnerability in &lt;a href=&#34;https://inedo.com/buildmaster&#34;&gt;Inedo BuildMaster&lt;/a&gt; 5.8.1 related to the use of &lt;a href=&#34;https://inedo.com/support/documentation/buildmaster/modeling-applications/configuration-files&#34;&gt;configuration file templates&lt;/a&gt; which allowed for RCE. This vulnerability could be exploited by an authenticated user directly, or by exploiting multiple CSRF vulnerabilities without the user&amp;rsquo;s knowledge in some cases.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>BuildMaster Event Listener RCE</title>
+      <link>/post/buildmaster-event-listener-rce/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/buildmaster-event-listener-rce/</guid>
+      <description>&lt;p&gt;In my initial look at &lt;a href=&#34;https://inedo.com/buildmaster&#34;&gt;Inedo BuildMaster&lt;/a&gt;, one of the more interesting capabilities I came across was event listeners. &lt;a href=&#34;https://inedo.com/support/documentation/buildmaster/global-components/event-listeners&#34;&gt;Event listeners&lt;/a&gt; allow users to have the BuildMaster server perform certain tasks when certain types of events occur within BuildMaster. It looks like this feature could be very useful to server administrators looking to integrate BuildMaster with external tools, but that&amp;rsquo;s not why it caught my eye. One of the types of event listeners available is &amp;ldquo;Execute Command Line&amp;rdquo;, which allows users to execute system commands on the BuildMaster server. The prevalence of this type of functionality in various CI/CD tools is a topic for another post, but in short, seeing this type of functionality worries me because it guarantees that there is a path to RCE either through application vulnerabilities or gaining access to a privileged user account.&lt;/p&gt;
+
+&lt;p&gt;Given how sensitive command line event listeners are, I decided to do some authorization testing. When testing this functionality with multiple users, I noticed that the option to create command line event listeners was unavailable in the UI for low privileged users, but it was available for privileged users. My testing of BuildMaster 5.8.1 indicated that the limitations enforced through the UI could be bypassed by low privileged users by directly navigating to certain URLs.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

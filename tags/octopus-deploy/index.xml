@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octopus Deploy on Application Security Blog</title>
+    <link>/tags/octopus-deploy/</link>
+    <description>Recent content in Octopus Deploy on Application Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
+    <lastBuildDate>Sun, 06 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/octopus-deploy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Package Name Directory Traversals</title>
+      <link>/post/package-name-directory-traversals/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/package-name-directory-traversals/</guid>
+      <description>&lt;p&gt;Last year I discovered two very similar directory traversal vulnerabilities in &lt;a href=&#34;https://octopus.com&#34;&gt;Octopus Deploy&lt;/a&gt; and &lt;a href=&#34;https://inedo.com/proget&#34;&gt;Inedo ProGet&lt;/a&gt;. Octopus Deploy&amp;rsquo;s built in NuGet feed and several feed types in ProGet were vulnerable to directory traversal attacks on the package name fields inside packages uploaded to the respective system. While the same type of vulnerability was found for several feed types in ProGet (including npm, Maven, VSIX, Ruby Gems&amp;hellip;), this post will focus on NuGet as it is representative of the other issues.&lt;/p&gt;
+
+&lt;p&gt;These vulnerabilities enabled an attacker to both overwrite arbitrary packages within the respective system and to write packages to arbitrary locations on the server&amp;rsquo;s file system. After a package was overwritten by one of these vulnerabilities, the attacker&amp;rsquo;s package would be returned instead of the original package. This could be used by an attacker spread a backdoor to several systems within a network.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

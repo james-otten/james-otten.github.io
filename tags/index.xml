@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Application Security Blog</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Application Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
+    <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authorization</title>
+      <link>/tags/authorization/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/authorization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Buildmaster</title>
+      <link>/tags/buildmaster/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/buildmaster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Csrf</title>
+      <link>/tags/csrf/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/csrf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cve</title>
+      <link>/tags/cve/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Directory Traversal</title>
+      <link>/tags/directory-traversal/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/directory-traversal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nuget</title>
+      <link>/tags/nuget/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/nuget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Octopus Deploy</title>
+      <link>/tags/octopus-deploy/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/octopus-deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>/tags/personal/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proget</title>
+      <link>/tags/proget/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/proget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rce</title>
+      <link>/tags/rce/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xslt</title>
+      <link>/tags/xslt/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/xslt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
