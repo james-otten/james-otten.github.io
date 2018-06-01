@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
-    <lastBuildDate>Sun, 13 May 2018 22:00:49 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 31 May 2018 21:41:23 -0500</lastBuildDate>
     
 	<atom:link href="https://blog.jamesotten.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CVEs</title>
+      <link>https://blog.jamesotten.com/cves/</link>
+      <pubDate>Thu, 31 May 2018 21:41:23 -0500</pubDate>
+      
+      <guid>https://blog.jamesotten.com/cves/</guid>
+      <description> CVE-2017-11348 Octopus Deploy Package ID Directory Traversal CVE-2017-14944 Indeo ProGet Directory Traversal CVE-2017-15606 Unpublished CVE-2017-15607 Inedo Otter Directory Traversal (RCE) CVE-2017-15608 Unpublished CVE-2017-16520 Inedo BuildMaster Improper Authorization (RCE) CVE-2017-16521 Inedo BuildMaster Unsafe User Controlled XSLT (RCE) CVE-2017-16760 Inedo BuildMaster XSS CVE-2017-16761 Inedo BuildMaster Open Redirect CVE-2017-16801 Octopus Deploy Step Template XSS CVE-2017-16810 Octopus Deploy Variable Set XSS CVE-2017-17086 Inedo Otter XSS  </description>
+    </item>
     
     <item>
       <title>About</title>
