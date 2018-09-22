@@ -42,9 +42,18 @@
     <item>
       <title>Cve</title>
       <link>https://blog.jamesotten.com/tags/cve/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://blog.jamesotten.com/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deserialization</title>
+      <link>https://blog.jamesotten.com/tags/deserialization/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.jamesotten.com/tags/deserialization/</guid>
       <description></description>
     </item>
     
@@ -54,6 +63,15 @@
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://blog.jamesotten.com/tags/directory-traversal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manageengine</title>
+      <link>https://blog.jamesotten.com/tags/manageengine/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.jamesotten.com/tags/manageengine/</guid>
       <description></description>
     </item>
     
@@ -96,7 +114,7 @@
     <item>
       <title>Rce</title>
       <link>https://blog.jamesotten.com/tags/rce/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://blog.jamesotten.com/tags/rce/</guid>
       <description></description>

@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
 
-  <title>BuildMaster Event Listener RCE &middot; Application Security Blog</title>
+  <title>Deserialization &middot; Application Security Blog</title>
 
   
   
@@ -39,6 +39,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
+  
+  <link rel="alternate" type="application/rss+xml" title="Application Security Blog" href="https://blog.jamesotten.com/tags/deserialization/index.xml" />
   
 
   
@@ -115,6 +117,10 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://blog.jamesotten.com/tags/deserialization/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+    </li>
     
 
     
@@ -214,16 +220,20 @@
 
 
 <div class="header">
-  <h1>BuildMaster Event Listener RCE</h1>
-  <h2></h2>
+  <h1>Deserialization</h1>
 </div>
-<div class="content">
 
-  <div class="post-meta">
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://blog.jamesotten.com/post/applications-manager-rce/">ManageEngine Applications Manager Deserialization Unauthenticated RCE</a></h2>
+
+    <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>12 May 2018</time>
+    <time>21 Sep 2018</time>
   </div>
 
   
@@ -238,11 +248,11 @@
     
       <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/rce">RCE</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/authorization">Authorization</a>&nbsp;&#47;
-    
       <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/cve">CVE</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/buildmaster">BuildMaster</a>
+      <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/manageengine">ManageEngine</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://blog.jamesotten.com/tags/deserialization">Deserialization</a>
     
   </div>
   
@@ -250,88 +260,21 @@
 
 </div>
 
-  <p>In my initial look at <a href="https://inedo.com/buildmaster">Inedo BuildMaster</a>, one of the more interesting capabilities I came across was event listeners. <a href="https://inedo.com/support/documentation/buildmaster/global-components/event-listeners">Event listeners</a> allow users to have the BuildMaster server perform certain tasks when certain types of events occur within BuildMaster. It looks like this feature could be very useful to server administrators looking to integrate BuildMaster with external tools, but that&rsquo;s not why it caught my eye. One of the types of event listeners available is &ldquo;Execute Command Line&rdquo;, which allows users to execute system commands on the BuildMaster server. The prevalence of this type of functionality in various CI/CD tools is a topic for another post, but in short, seeing this type of functionality worries me because it guarantees that there is a path to RCE either through application vulnerabilities or gaining access to a privileged user account.</p>
+  </header>
 
-<p>Given how sensitive command line event listeners are, I decided to do some authorization testing. When testing this functionality with multiple users, I noticed that the option to create command line event listeners was unavailable in the UI for low privileged users, but it was available for privileged users. My testing of BuildMaster 5.8.1 indicated that the limitations enforced through the UI could be bypassed by low privileged users by directly navigating to certain URLs.
+  <p>
+  <p>This year at Black Hat USA I participated in Offensive Security&rsquo;s <a href="https://www.offensive-security.com/information-security-training/advanced-web-attack-and-exploitation/">AWAE</a>. This training was extremely interesting and I would strongly recommend it to others interested in web application security. One of the modules in AWAE included looking at <a href="https://www.manageengine.com/products/applications_manager/">ManageEngine Applications Manager</a>. As I have some previous experience with web applications and writing PoCs, I occasionally found myself with some spare time during the training. I spent most of this spare time looking deeper into the applications that were included in the training and I ended up finding my first deserialization vulnerability. This vulnerability happens to be an unauthenticated remote root in ManageEngine Applications Manager running on Windows machines. While I have not seen this vulnerability posted online, I know for a fact that I am not the only one who has come across it.
 </p>
-
-<h2 id="exploitation">Exploitation</h2>
-
-<p>I plan to write a metasploit module for this vulnerability at some point, but it was also easy to exploit by signing in to BuildMaster and navigating to</p>
-
-<pre><code>/event/listeners/edit?eventListenerTypeName=Inedo.BuildMaster.Extensibility.EventListeners.General.CommandLineEventListener%2CBuildMasterExtensions
-</code></pre>
-
-<p>After filling out the form and saving, trigger your event listener by performing the type of action you configured.</p>
-
-<h2 id="analysis">Analysis</h2>
-
-<p>The root cause of this vulnerability is that instead of implementing authorization checks on the server when saving event listeners, the UI elements related to command line event listeners were simply hidden. While it is good practice to not clutter the UI of your application with actions the current user cannot perform, the UI is not the place to implement authorization. Instead, authorization should be implemented outside of the user&rsquo;s control, which for web applications means on the server.</p>
-
-<h2 id="mitigation">Mitigation</h2>
-
-<p>Updating to BuildMaster 5.8.2+ will prevent attackers from exploiting this vulnerability.</p>
-
-<h2 id="more-information">More information</h2>
-
-<ul>
-<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16520">CVE-2017-16520</a></li>
-<li><a href="https://inedo.myjetbrains.com/youtrack/issue/BM-3107">BM-3107</a></li>
-</ul>
+  </p>
 
   
-<div class="prev-next-post pure-g">
-  <div class="pure-u-1-24" style="text-align: left;">
-    
-    <a href="https://blog.jamesotten.com/post/package-name-directory-traversals/"><i class="fa fa-chevron-left"></i></a>
-    
-  </div>
-  <div class="pure-u-10-24">
-    
-    <nav class="prev">
-      <a href="https://blog.jamesotten.com/post/package-name-directory-traversals/">Package Name Directory Traversals</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-2-24">
-    &nbsp;
-  </div>
-  <div class="pure-u-10-24">
-    
-    <nav class="next">
-      <a href="https://blog.jamesotten.com/post/buildmaster-xslt-rce/">BuildMaster Configuration File Template XSLT RCE</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://blog.jamesotten.com/post/buildmaster-xslt-rce/"><i class="fa fa-chevron-right"></i></a>
-    
-  </div>
-</div>
-
-
+  <footer>
+    <a href="https://blog.jamesotten.com/post/applications-manager-rce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
 
   
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'jamesotten';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
 </div>
 
 </div>
@@ -358,4 +301,3 @@
 
 </body>
 </html>
-

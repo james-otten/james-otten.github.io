@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 James Otten. &amp;nbsp;All rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 May 2018 21:41:23 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.jamesotten.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ManageEngine Applications Manager Deserialization Unauthenticated RCE</title>
+      <link>https://blog.jamesotten.com/post/applications-manager-rce/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.jamesotten.com/post/applications-manager-rce/</guid>
+      <description>&lt;p&gt;This year at Black Hat USA I participated in Offensive Security&amp;rsquo;s &lt;a href=&#34;https://www.offensive-security.com/information-security-training/advanced-web-attack-and-exploitation/&#34;&gt;AWAE&lt;/a&gt;. This training was extremely interesting and I would strongly recommend it to others interested in web application security. One of the modules in AWAE included looking at &lt;a href=&#34;https://www.manageengine.com/products/applications_manager/&#34;&gt;ManageEngine Applications Manager&lt;/a&gt;. As I have some previous experience with web applications and writing PoCs, I occasionally found myself with some spare time during the training. I spent most of this spare time looking deeper into the applications that were included in the training and I ended up finding my first deserialization vulnerability. This vulnerability happens to be an unauthenticated remote root in ManageEngine Applications Manager running on Windows machines. While I have not seen this vulnerability posted online, I know for a fact that I am not the only one who has come across it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>CVEs</title>
@@ -18,7 +28,7 @@
       <pubDate>Thu, 31 May 2018 21:41:23 -0500</pubDate>
       
       <guid>https://blog.jamesotten.com/cves/</guid>
-      <description> CVE-2017-11348 Octopus Deploy Package ID Directory Traversal CVE-2017-14944 Indeo ProGet Directory Traversal CVE-2017-15606 Unpublished CVE-2017-15607 Inedo Otter Directory Traversal (RCE) CVE-2017-15608 Unpublished CVE-2017-16520 Inedo BuildMaster Improper Authorization (RCE) CVE-2017-16521 Inedo BuildMaster Unsafe User Controlled XSLT (RCE) CVE-2017-16760 Inedo BuildMaster XSS CVE-2017-16761 Inedo BuildMaster Open Redirect CVE-2017-16801 Octopus Deploy Step Template XSS CVE-2017-16810 Octopus Deploy Variable Set XSS CVE-2017-17086 Inedo Otter XSS CVE-2018-16243 Unpublished CVE-2018-16364 Unpublished  </description>
+      <description> CVE-2017-11348 Octopus Deploy Package ID Directory Traversal CVE-2017-14944 Indeo ProGet Directory Traversal CVE-2017-15606 Unpublished CVE-2017-15607 Inedo Otter Directory Traversal (RCE) CVE-2017-15608 Unpublished CVE-2017-16520 Inedo BuildMaster Improper Authorization (RCE) CVE-2017-16521 Inedo BuildMaster Unsafe User Controlled XSLT (RCE) CVE-2017-16760 Inedo BuildMaster XSS CVE-2017-16761 Inedo BuildMaster Open Redirect CVE-2017-16801 Octopus Deploy Step Template XSS CVE-2017-16810 Octopus Deploy Variable Set XSS CVE-2017-17086 Inedo Otter XSS CVE-2018-16243 Unpublished CVE-2018-16364 ManageEngine Applications Manager Deserialization (Unauthenticated RCE)  </description>
     </item>
     
     <item>
