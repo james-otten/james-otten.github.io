@@ -28,7 +28,7 @@
       <pubDate>Thu, 31 May 2018 21:41:23 -0500</pubDate>
       
       <guid>https://blog.jamesotten.com/cves/</guid>
-      <description> CVE-2017-11348 Octopus Deploy Package ID Directory Traversal CVE-2017-14944 Indeo ProGet Directory Traversal CVE-2017-15606 Unpublished CVE-2017-15607 Inedo Otter Directory Traversal (RCE) CVE-2017-15608 Unpublished CVE-2017-16520 Inedo BuildMaster Improper Authorization (RCE) CVE-2017-16521 Inedo BuildMaster Unsafe User Controlled XSLT (RCE) CVE-2017-16760 Inedo BuildMaster XSS CVE-2017-16761 Inedo BuildMaster Open Redirect CVE-2017-16801 Octopus Deploy Step Template XSS CVE-2017-16810 Octopus Deploy Variable Set XSS CVE-2017-17086 Inedo Otter XSS CVE-2018-16243 Unpublished CVE-2018-16364 ManageEngine Applications Manager Deserialization (Unauthenticated RCE)  </description>
+      <description> CVE-2017-11348 Octopus Deploy Package ID Directory Traversal CVE-2017-14944 Indeo ProGet Directory Traversal CVE-2017-15606 Unpublished CVE-2017-15607 Inedo Otter Directory Traversal (RCE) CVE-2017-15608 Inedo Advanced Settings CSRF CVE-2017-16520 Inedo BuildMaster Improper Authorization (RCE) CVE-2017-16521 Inedo BuildMaster Unsafe User Controlled XSLT (RCE) CVE-2017-16760 Inedo BuildMaster XSS CVE-2017-16761 Inedo BuildMaster Open Redirect CVE-2017-16801 Octopus Deploy Step Template XSS CVE-2017-16810 Octopus Deploy Variable Set XSS CVE-2017-17086 Inedo Otter XSS CVE-2018-16243 Unpublished CVE-2018-16364 ManageEngine Applications Manager Deserialization (Unauthenticated RCE)  </description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@
       
       <guid>https://blog.jamesotten.com/about/</guid>
       <description>About Me I&amp;rsquo;m James Otten and this is my personal blog. I&amp;rsquo;m a Software Engineer in Minnesota with a strong interest in application and network security. In my spare time I enjoy finding vulnerabilities in web applications, auditing code, maintaining my home lab, and writing software.
-Purpose The purpose of this blog is to help others learn about application security. I plan to post as many write-ups as I can in a public setting in the hopes that this information will be useful to those looking at improve application security by writing more secure software and useful to those tasked with assessing application security.</description>
+Purpose The purpose of this blog is to help others learn about application security. I plan to post as many write-ups as I can here in the hopes that this information will be useful for those looking to improve application security from both the offensive and defensive perspective.</description>
     </item>
     
     <item>
